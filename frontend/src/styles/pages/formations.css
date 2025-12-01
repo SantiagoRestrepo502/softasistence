@@ -1,0 +1,63 @@
+.formations-page {
+  margin-left: 260px;
+  margin-top: 72px;
+  padding: var(--spacing-xl);
+}
+
+.formations-page__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.formations-page__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.formations-page__icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--sena-verde);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+}
+
+.formations-page__title {
+  font-size: 2rem;
+  color: var(--sena-gris-oscuro);
+  margin: 0;
+}
+
+.formations-page__subtitle {
+  color: #666;
+  margin-bottom: var(--spacing-xl);
+}
+
+.formations-page__stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.formations-page__formations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .formations-page {
+    margin-left: 0;
+  }
+
+  .formations-page__formations-grid {
+    grid-template-columns: 1fr;
+  }
+}

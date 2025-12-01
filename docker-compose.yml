@@ -1,0 +1,47 @@
+services:
+  db:
+    image: mysql:8
+    container_name: asistencia_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: asistencia
+    volumes:
+      - ./backend/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - db_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+    restart: always
+
+  backend:
+    build:
+      context: ./backend
+    container_name: asistencia_backend
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      MYSQL_HOST: db
+      MYSQL_PORT: 3306
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: asistencia
+      MYSQL_CONNECTION_LIMIT: 10
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        API_BASE_URL: http://localhost:3000/api
+    container_name: asistencia_frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    restart: always
+
+volumes:
+  db_data:

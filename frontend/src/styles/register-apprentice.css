@@ -1,0 +1,218 @@
+/* Variables Corporativas */
+:root {
+    --sena-green: #39A900;
+    --sena-green-dark: #2e8500;
+    --sena-green-light: #4ccf00;
+    --text-dark: #1f2937;
+    --text-gray: #6b7280;
+    --bg-light: #f9fafb;
+    --white: #ffffff;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+}
+
+/* Contenedor Principal del Formulario de Aprendiz */
+.apprentice-form-container {
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Header del Formulario */
+.apprentice-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.apprentice-title {
+    color: var(--sena-green);
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.025em;
+}
+
+.apprentice-subtitle {
+    color: var(--text-gray);
+    font-size: 0.975rem;
+}
+
+/* Grid System */
+.apprentice-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .apprentice-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Grupos de Inputs */
+.apprentice-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.apprentice-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.apprentice-label svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--sena-green);
+}
+
+/* Inputs Modernos */
+.apprentice-input,
+.apprentice-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius-lg);
+    background-color: var(--bg-light);
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.apprentice-input:focus,
+.apprentice-select:focus {
+    outline: none;
+    border-color: var(--sena-green);
+    background-color: var(--white);
+    box-shadow: 0 0 0 3px rgba(57, 169, 0, 0.1);
+}
+
+.apprentice-input::placeholder {
+    color: #9ca3af;
+}
+
+.apprentice-input--error {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+/* Mensajes de Error */
+.apprentice-error {
+    font-size: 0.75rem;
+    color: #ef4444;
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* Sección Biométrica */
+.apprentice-biometric {
+    grid-column: 1 / -1;
+    background-color: #f0fdf4;
+    border: 1px dashed var(--sena-green);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.apprentice-biometric-title {
+    color: var(--sena-green-dark);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Spinner Profesional */
+.spinner {
+    border: 3px solid rgba(57, 169, 0, 0.1);
+    border-left-color: var(--sena-green);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Botón Principal */
+.apprentice-btn-submit {
+    grid-column: 1 / -1;
+    background-color: var(--sena-green);
+    color: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: var(--radius-lg);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+.apprentice-btn-submit:hover {
+    background-color: var(--sena-green-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
+
+.apprentice-btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Botones Secundarios (Cámara) */
+.apprentice-btn-camera {
+    background-color: var(--white);
+    color: var(--sena-green);
+    border: 1px solid var(--sena-green);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.apprentice-btn-camera:hover {
+    background-color: #f0fdf4;
+}
+
+/* Badge de Éxito */
+.apprentice-badge-success {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}

@@ -1,0 +1,152 @@
+{
+  "formaciones": [
+    {
+      "Field": "codigo",
+      "Type": "varchar(100)",
+      "Null": "NO",
+      "Key": "PRI",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "nombre",
+      "Type": "varchar(200)",
+      "Null": "YES",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "jornada",
+      "Type": "enum('mañana','tarde','noche','mixta')",
+      "Null": "YES",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "fecha_inicio",
+      "Type": "date",
+      "Null": "YES",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "fecha_fin",
+      "Type": "date",
+      "Null": "YES",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "activo",
+      "Type": "tinyint(1)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "1",
+      "Extra": ""
+    },
+    {
+      "Field": "created_at",
+      "Type": "timestamp",
+      "Null": "NO",
+      "Key": "",
+      "Default": "CURRENT_TIMESTAMP",
+      "Extra": "DEFAULT_GENERATED"
+    }
+  ],
+  "formaciones_aprendices": [
+    {
+      "Field": "id_relacion",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "PRI",
+      "Default": null,
+      "Extra": "auto_increment"
+    },
+    {
+      "Field": "fk_codigo_formacion",
+      "Type": "varchar(100)",
+      "Null": "YES",
+      "Key": "MUL",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "id_aprendiz",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "UNI",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "fecha_asignacion",
+      "Type": "timestamp",
+      "Null": "YES",
+      "Key": "",
+      "Default": "CURRENT_TIMESTAMP",
+      "Extra": "DEFAULT_GENERATED"
+    }
+  ],
+  "asistencias": [
+    {
+      "Field": "id_asistencias",
+      "Type": "int",
+      "Null": "NO",
+      "Key": "PRI",
+      "Default": null,
+      "Extra": "auto_increment"
+    },
+    {
+      "Field": "fk_codigo_formacion",
+      "Type": "varchar(100)",
+      "Null": "YES",
+      "Key": "MUL",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "fk_aprendiz",
+      "Type": "int",
+      "Null": "YES",
+      "Key": "MUL",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "presente",
+      "Type": "tinyint(1)",
+      "Null": "YES",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "hora_registro",
+      "Type": "timestamp",
+      "Null": "NO",
+      "Key": "",
+      "Default": "CURRENT_TIMESTAMP",
+      "Extra": "DEFAULT_GENERATED"
+    },
+    {
+      "Field": "documento",
+      "Type": "varchar(20)",
+      "Null": "YES",
+      "Key": "",
+      "Default": null,
+      "Extra": ""
+    },
+    {
+      "Field": "fk_usuario",
+      "Type": "int",
+      "Null": "YES",
+      "Key": "MUL",
+      "Default": null,
+      "Extra": ""
+    }
+  ]
+}

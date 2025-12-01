@@ -1,0 +1,131 @@
+.formation-card {
+  background-color: white;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--sena-verde);
+  transition: transform var(--transition-fast);
+}
+
+.formation-card:hover {
+  transform: translateY(-2px);
+}
+
+.formation-card--completed {
+  border-left-color: #999;
+}
+
+.formation-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+}
+
+.formation-card__code {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--sena-gris-oscuro);
+}
+
+.formation-card__status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.formation-card__status-badge--progress {
+  background-color: #C8E6C9;
+  color: var(--sena-verde-oscuro);
+}
+
+.formation-card__status-badge--completed {
+  background-color: #E0E0E0;
+  color: #666;
+}
+
+.formation-card__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--sena-gris-oscuro);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.4;
+}
+
+.formation-card__progress-section {
+  margin-bottom: var(--spacing-md);
+}
+
+.formation-card__progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.9rem;
+}
+
+.formation-card__progress-label {
+  color: #666;
+}
+
+.formation-card__progress-value {
+  font-weight: 600;
+  color: var(--sena-verde);
+}
+
+.formation-card__progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #E0E0E0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.formation-card__progress-fill {
+  height: 100%;
+  background-color: var(--sena-verde);
+  transition: width var(--transition-normal);
+}
+
+.formation-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.formation-card__info-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.formation-card__info-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--sena-verde);
+  flex-shrink: 0;
+}
+
+.formation-card__btn-details {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--sena-verde);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.formation-card__btn-details:hover {
+  background-color: var(--sena-verde-oscuro);
+}

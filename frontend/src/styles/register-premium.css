@@ -1,0 +1,336 @@
+/* ============================================
+   REGISTER APRENDIZ QR - PREMIUM STYLES
+   ============================================ */
+
+:root {
+    --color-primary: #39A900;
+    --color-primary-dark: #2d8500;
+    --color-primary-light: #4bc200;
+    --color-gray-50: #f9fafb;
+    --color-gray-100: #f3f4f6;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d1d5db;
+    --color-gray-400: #9ca3af;
+    --color-gray-500: #6b7280;
+    --color-gray-600: #4b5563;
+    --color-gray-700: #374151;
+    --color-gray-800: #1f2937;
+    --color-gray-900: #111827;
+
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-tertiary: #f3f4f6;
+
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+}
+
+/* Container */
+.register-premium-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4);
+    background: linear-gradient(135deg, var(--color-gray-50) 0%, var(--color-gray-100) 100%);
+}
+
+/* Card */
+.register-card {
+    background: var(--bg-primary);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-xl);
+    padding: var(--space-8);
+    width: 100%;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-gray-200);
+}
+
+.register-card__form-panel {
+    width: 100%;
+}
+
+/* Icon */
+.register-card__icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-radius: var(--radius-2xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    margin: 0 auto var(--space-6);
+    animation: float 3s ease-in-out infinite;
+}
+
+.register-card__icon svg {
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Header */
+.register-form__header {
+    text-align: center;
+    margin-bottom: var(--space-8);
+}
+
+.register-form__heading {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--color-gray-800) 0%, var(--color-gray-600) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--space-3);
+}
+
+.register-form__subheading {
+    font-size: var(--text-sm);
+    color: var(--color-gray-600);
+    line-height: 1.6;
+}
+
+/* Form */
+.register-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: var(--space-6);
+}
+
+/* Label */
+.form-label {
+    display: flex;
+    align-items: center;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-gray-700);
+    margin-bottom: var(--space-2);
+}
+
+.form-label__icon {
+    width: 16px;
+    height: 16px;
+    margin-right: var(--space-2);
+    color: var(--color-gray-500);
+}
+
+.form-label__hint {
+    margin-left: var(--space-2);
+    color: var(--color-gray-400);
+    font-weight: 400;
+    font-size: var(--text-xs);
+}
+
+/* Input Wrapper */
+.form-input-wrapper {
+    position: relative;
+}
+
+.form-input-wrapper__icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: var(--color-gray-400);
+    pointer-events: none;
+}
+
+/* Input */
+.form-input {
+    width: 100%;
+    padding: 12px 16px 12px 44px;
+    border: 2px solid var(--color-gray-300);
+    border-radius: var(--radius-lg);
+    font-size: var(--text-base);
+    color: var(--color-gray-700);
+    transition: all 0.3s ease;
+    outline: none;
+    background: var(--bg-primary);
+}
+
+.form-input::placeholder {
+    color: var(--color-gray-400);
+}
+
+.form-input:hover {
+    border-color: var(--color-gray-400);
+}
+
+.form-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(57, 169, 0, 0.1);
+}
+
+.form-input--error {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Error Message */
+.form-error {
+    display: flex;
+    align-items: center;
+    margin-top: var(--space-2);
+    font-size: var(--text-sm);
+    color: #ef4444;
+    animation: shake 0.3s ease;
+}
+
+.form-error__icon {
+    width: 16px;
+    height: 16px;
+    margin-right: var(--space-2);
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--radius-lg);
+    font-size: var(--text-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    text-decoration: none;
+    gap: var(--space-2);
+}
+
+.btn__icon {
+    width: 20px;
+    height: 20px;
+}
+
+.btn--primary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn--primary:active {
+    transform: translateY(0);
+}
+
+.btn--secondary {
+    background: var(--color-gray-100);
+    color: var(--color-gray-700);
+    border: 2px solid var(--color-gray-300);
+}
+
+.btn--secondary:hover {
+    background: var(--color-gray-200);
+    border-color: var(--color-gray-400);
+}
+
+.btn--full {
+    width: 100%;
+}
+
+.btn--lg {
+    padding: 14px 28px;
+    font-size: var(--text-lg);
+}
+
+/* Fade In Animation */
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .register-card {
+        padding: var(--space-6);
+    }
+
+    .register-form__heading {
+        font-size: var(--text-2xl);
+    }
+
+    .register-card__icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    .register-card__icon svg {
+        width: 32px;
+        height: 32px;
+    }
+}

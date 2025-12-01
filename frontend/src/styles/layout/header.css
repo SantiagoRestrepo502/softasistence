@@ -1,0 +1,104 @@
+.sena-header {
+  background-color: var(--sena-verde);
+  padding: var(--spacing-md) var(--spacing-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  height: 72px;
+}
+
+.sena-header__logo {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--sena-verde);
+  font-size: 20px;
+}
+
+.sena-header__right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.sena-header__notification-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-fast);
+}
+
+.sena-header__notification-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.sena-header__user-profile {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.sena-header__user-profile:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.sena-header__user-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sena-verde);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.sena-header__user-name {
+  color: white;
+  font-weight: 500;
+}
+
+.sena-header__user-dropdown {
+  color: white;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sena-header {
+    padding: var(--spacing-md);
+  }
+
+  .sena-header__right {
+    gap: var(--spacing-sm);
+  }
+
+  .sena-header__user-name {
+    display: none;
+  }
+}

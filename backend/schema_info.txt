@@ -1,0 +1,165 @@
+--- TABLES ---
+[
+  "ambientes",
+  "aprendices",
+  "asistencias",
+  "formaciones",
+  "formaciones_aprendices",
+  "logs_auditoria",
+  "reportes_google_sheets",
+  "usuarios"
+]
+
+--- DESCRIBE formaciones ---
+[
+  {
+    "Field": "id_formaciones",
+    "Type": "int",
+    "Null": "NO",
+    "Key": "PRI",
+    "Default": null,
+    "Extra": "auto_increment"
+  },
+  {
+    "Field": "codigo",
+    "Type": "varchar(100)",
+    "Null": "YES",
+    "Key": "UNI",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "nombre",
+    "Type": "varchar(200)",
+    "Null": "YES",
+    "Key": "",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "jornada",
+    "Type": "enum('mañana','tarde','noche','mixta')",
+    "Null": "YES",
+    "Key": "",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "fecha_inicio",
+    "Type": "date",
+    "Null": "YES",
+    "Key": "",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "fecha_fin",
+    "Type": "date",
+    "Null": "YES",
+    "Key": "",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "activo",
+    "Type": "tinyint(1)",
+    "Null": "YES",
+    "Key": "",
+    "Default": "1",
+    "Extra": ""
+  },
+  {
+    "Field": "created_at",
+    "Type": "timestamp",
+    "Null": "NO",
+    "Key": "",
+    "Default": "CURRENT_TIMESTAMP",
+    "Extra": "DEFAULT_GENERATED"
+  }
+]
+
+--- DESCRIBE aprendices ---
+[
+  {
+    "Field": "id_aprendices",
+    "Type": "int",
+    "Null": "NO",
+    "Key": "PRI",
+    "Default": null,
+    "Extra": "auto_increment"
+  },
+  {
+    "Field": "documento",
+    "Type": "varchar(50)",
+    "Null": "YES",
+    "Key": "UNI",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "tipo_documento",
+    "Type": "enum('CC','TI','CE','PASAPORTE')",
+    "Null": "YES",
+    "Key": "",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "nombres",
+    "Type": "varchar(150)",
+    "Null": "YES",
+    "Key": "",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "apellidos",
+    "Type": "varchar(150)",
+    "Null": "YES",
+    "Key": "",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "email",
+    "Type": "varchar(150)",
+    "Null": "YES",
+    "Key": "",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "telefono",
+    "Type": "varchar(20)",
+    "Null": "YES",
+    "Key": "",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "face_descriptor",
+    "Type": "json",
+    "Null": "YES",
+    "Key": "",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "activo",
+    "Type": "tinyint(1)",
+    "Null": "YES",
+    "Key": "",
+    "Default": "1",
+    "Extra": ""
+  },
+  {
+    "Field": "fecha_creacion",
+    "Type": "timestamp",
+    "Null": "NO",
+    "Key": "",
+    "Default": "CURRENT_TIMESTAMP",
+    "Extra": "DEFAULT_GENERATED"
+  }
+]
+
+No obvious junction table found.

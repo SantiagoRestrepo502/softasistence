@@ -1,0 +1,228 @@
+/* Admin Header Styles - Color SENA Verde */
+
+.admin-header {
+  height: 64px;
+  background-color: #39A900; /* Color verde SENA */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: fixed;
+  top: 0;
+  left: 240px;
+  right: 0;
+  z-index: 99;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-header-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-header-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: white;
+}
+
+.admin-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.admin-header-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+.admin-header-subtitle {
+  font-size: 12px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+}
+
+.admin-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-header-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.admin-header-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.admin-header-notification {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.admin-header-notification:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.admin-header-notification svg {
+  width: 20px;
+  height: 20px;
+  stroke: white;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff6600; /* Color naranja SENA */
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #39A900;
+}
+
+.admin-header-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.admin-header-user:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.admin-header-user:hover .admin-header-dropdown {
+  display: block;
+}
+
+.admin-header-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.admin-header-user-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+.admin-header-user-role {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: capitalize;
+}
+
+.admin-header-avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #ff6600 0%, #ff8533 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.admin-header-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin-top: 8px;
+  min-width: 180px;
+  overflow: hidden;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: #f3f4f6;
+}
+
+.dropdown-item svg {
+  width: 16px;
+  height: 16px;
+  stroke: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-header {
+    left: 200px;
+    padding: 0 16px;
+  }
+
+  .admin-header-button {
+    display: none;
+  }
+
+  .admin-header-user-info {
+    display: none;
+  }
+}

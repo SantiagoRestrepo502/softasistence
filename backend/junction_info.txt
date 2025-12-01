@@ -1,0 +1,36 @@
+
+--- DESCRIBE formaciones_aprendices ---
+[
+  {
+    "Field": "id_relacion",
+    "Type": "int",
+    "Null": "NO",
+    "Key": "PRI",
+    "Default": null,
+    "Extra": "auto_increment"
+  },
+  {
+    "Field": "id_formacion",
+    "Type": "int",
+    "Null": "NO",
+    "Key": "MUL",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "id_aprendiz",
+    "Type": "int",
+    "Null": "NO",
+    "Key": "MUL",
+    "Default": null,
+    "Extra": ""
+  },
+  {
+    "Field": "fecha_asignacion",
+    "Type": "timestamp",
+    "Null": "YES",
+    "Key": "",
+    "Default": "CURRENT_TIMESTAMP",
+    "Extra": "DEFAULT_GENERATED"
+  }
+]

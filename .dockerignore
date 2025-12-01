@@ -1,0 +1,34 @@
+# Archivos y directorios a ignorar en Docker
+
+# Node modules
+**/node_modules
+**/npm-debug.log
+
+# Archivos de entorno
+**/.env
+**/.env.local
+
+# Archivos de build
+**/dist
+**/build
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+**/tmp
+**/.cache

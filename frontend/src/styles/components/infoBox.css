@@ -1,0 +1,19 @@
+.info-box {
+  background-color: #E8F5E0;
+  border: 1px solid #C8E6C9;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-lg);
+}
+
+.info-box__title {
+  color: var(--sena-verde);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.info-box__content {
+  color: var(--sena-gris-oscuro);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

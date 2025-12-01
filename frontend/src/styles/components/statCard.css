@@ -1,0 +1,26 @@
+.stat-card {
+  background-color: white;
+  border: 2px solid #C8E6C9;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  text-align: center;
+  transition: transform var(--transition-fast);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-card__title {
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: var(--spacing-sm);
+}
+
+.stat-card__number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--sena-verde);
+  line-height: 1;
+}
