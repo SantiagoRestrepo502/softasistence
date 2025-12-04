@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './FormacionesManagement.css';
 import AdminHeader from '../../components/admin/AdminHeader';
+import AnalyticsModal from '../../components/analytics/AnalyticsModal';
 
 import { getAuthHeader } from '../../utils/adminAuth';
 
@@ -15,6 +16,8 @@ function FormacionesManagement() {
   const [filterEstado, setFilterEstado] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [editingFormacion, setEditingFormacion] = useState(null);
+  const [showAnalyticsModal, setShowAnalyticsModal] = useState(false);
+  const [selectedFormacionForAnalytics, setSelectedFormacionForAnalytics] = useState(null);
 
   const [formData, setFormData] = useState({
     codigo: '',
@@ -256,6 +259,20 @@ function FormacionesManagement() {
                     <td>
                       <div className="action-buttons">
                         <button
+                          onClick={() => {
+                            setSelectedFormacionForAnalytics(formacion);
+                            setShowAnalyticsModal(true);
+                          }}
+                          className="action-btn action-analytics"
+                          title="Ver Análisis"
+                        >
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <line x1="18" y1="20" x2="18" y2="10" strokeWidth="2" strokeLinecap="round" />
+                            <line x1="12" y1="20" x2="12" y2="4" strokeWidth="2" strokeLinecap="round" />
+                            <line x1="6" y1="20" x2="6" y2="14" strokeWidth="2" strokeLinecap="round" />
+                          </svg>
+                        </button>
+                        <button
                           onClick={() => handleEditFormacion(formacion)}
                           className="action-btn action-edit"
                           title="Editar"
@@ -376,6 +393,17 @@ function FormacionesManagement() {
             </form>
           </div>
         </div>
+      )}
+
+      {/* Modal de Analytics */}
+      {showAnalyticsModal && selectedFormacionForAnalytics && (
+        <AnalyticsModal
+          formacion={selectedFormacionForAnalytics}
+          onClose={() => {
+            setShowAnalyticsModal(false);
+            setSelectedFormacionForAnalytics(null);
+          }}
+        />
       )}
     </>
   );

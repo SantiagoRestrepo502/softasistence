@@ -72,3 +72,13 @@
 .action-delete:hover {
   background-color: #fecaca;
 }
+
+.action-analytics {
+  background-color: #E8F5E0;
+  color: #39A900;
+}
+
+.action-analytics:hover {
+  background-color: #d1fae5;
+  color: #2D8500;
+}
