@@ -14,11 +14,12 @@ const rules = require('../utils/analytics-rules');
  */
 function calculateAttendancePercentage(presente, total) {
     if (!total || total === 0) {
+        const classificationObj = rules.getAttendanceClassification(0);
         return {
             percentage: 0,
-            classification: rules.getAttendanceClassification(0),
-            label: 'crítica',
-            severity: 'critico'
+            classification: classificationObj.label,
+            label: classificationObj.label,
+            severity: classificationObj.severity
         };
     }
 
